@@ -9,7 +9,9 @@ export default {
         colors:{
             primary: '#f5385D',
             pacificblue: '#0092ca',
-            fuscousGray: '#515151'
+            washedBlack: '#1f272b',
+            washedWhite: '#e0d8be',
+
         },
         height:{
             '40rem': '40rem',
