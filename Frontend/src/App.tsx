@@ -13,6 +13,10 @@ function App() {
                 <Route path='/' element={<Layout />}>
                     <Route index element={<MainPage />} />
                     <Route path='/clubPage' element={<ClubPage />} />
+                    <Route path='/price' element={<ClubPage />} />
+                    <Route path='/aboutUs' element={<ClubPage />} />
+                    <Route path='/photoClub' element={<ClubPage />} />
+                    <Route path='/contacts' element={<ClubPage />} />
                 </Route>
             </Routes>
         </Router>

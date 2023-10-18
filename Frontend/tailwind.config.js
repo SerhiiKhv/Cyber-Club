@@ -11,6 +11,8 @@ export default {
             pacificblue: '#0092ca',
             washedBlack: '#1f272b',
             washedWhite: '#e0d8be',
+            cardinGreen: '#0c1c1c',
+            bristolBlue: '#518d8d',
 
         },
         height:{
