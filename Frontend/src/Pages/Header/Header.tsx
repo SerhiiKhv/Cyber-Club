@@ -1,7 +1,27 @@
 import {Link} from "react-router-dom";
 import LogoGif from "../../Assets/Logo/Logo.gif"
+import {useEffect, useState} from "react";
 
 export const Header = () => {
+
+    const [isHeaderFixed, setIsHeaderFixed] = useState(false);
+
+    useEffect(() => {
+        const handleScroll = () => {
+            if (window.scrollY > 100) {
+                setIsHeaderFixed(true);
+            } else {
+                setIsHeaderFixed(false);
+            }
+        };
+
+        window.addEventListener("scroll", handleScroll);
+
+        return () => {
+            window.removeEventListener("scroll", handleScroll);
+        };
+    }, []);
+
     return (
         <header>
             <div className="px-6 py-2 flex justify-between bg-washedBlack">
@@ -39,12 +59,9 @@ export const Header = () => {
                         </svg>
                     </div>
                 </div>
-
             </div>
 
-
-            <div className="px-20 h-32 flex justify-between items-center bg-cardinGreen">
-
+            <div className={`${isHeaderFixed ? "px-20 h-32 flex justify-between items-center  fixed top-0 left-0 right-0 bg-cardinGreen z-50 opacity-75" : "px-20 h-32 flex justify-between items-center bg-cardinGreen"}`}>
                 <Link to={'/'}>
                     <div className="flex items-center gap-2">
                         <div>
