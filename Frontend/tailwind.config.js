@@ -15,6 +15,9 @@ export default {
             bristolBlue: '#518d8d',
 
         },
+        backgroundImage: {
+            'price': "url('/src/Assets/Background/PriceBackground.jpg')",
+        },
         height:{
             '40rem': '40rem',
             "90vh": '90vh'
