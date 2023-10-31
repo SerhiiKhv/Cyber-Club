@@ -2,11 +2,28 @@ import React from 'react';
 // @ts-ignore
 import videoBackground from '../Assets/VideoBackground/VideoBackgroundMainPage.mp4';
 import supportCompany from '../Assets/Img/SupportCompany.png'
+
 import photo1 from '../Assets/PhotoClub/1.jpeg'
 import photo2 from '../Assets/PhotoClub/2.jpg'
 import photo3 from '../Assets/PhotoClub/3.jpg'
 import photo4 from '../Assets/PhotoClub/4.jpg'
 import photo5 from '../Assets/PhotoClub/5.jpeg'
+
+import Minecraft from '../Assets/Game/Minecraft.png'
+import GTA5Img from '../Assets/Game/GTA.jpg'
+import RDR2 from '../Assets/Game/RDR2.jpg'
+import ResidentEvil from '../Assets/Game/ResidentEvilVillage.jpg'
+import MetroExodus from '../Assets/Game/MetroExodus.jpg'
+import TheWitcher3 from '../Assets/Game/TheWitcher3.jpg'
+
+
+import GenshinImpact from '../Assets/Game/GenshinImpact.jpg'
+import CS2 from '../Assets/Game/cs2.jpg'
+import Dota2 from '../Assets/Game/Dota2.jpg'
+import PUBG from '../Assets/Game/PUBG.jpg'
+import Fifa from '../Assets/Game/FIFA.jpeg'
+import WorldOfTanks from '../Assets/Game/WorldOfTanks.jpg'
+
 import {Link} from "react-router-dom";
 import {Contacts} from "./PagesInfo/Contacts/Contacts";
 
@@ -63,12 +80,12 @@ export const MainPage = () => {
                         </h1>
 
                         <div className="grid grid-cols-6">
-                            <img src={photo1} alt={"Loading..."} className='h-96 w-full object-cover object-center'/>
-                            <img src={photo2} alt={"Loading..."} className='h-96 w-full object-cover object-center'/>
-                            <img src={photo3} alt={"Loading..."} className='h-96 w-full object-cover object-center'/>
-                            <img src={photo4} alt={"Loading..."} className='h-96 w-full object-cover object-center'/>
-                            <img src={photo5} alt={"Loading..."} className='h-96 w-full object-cover object-center'/>
-                            <img src={photo5} alt={"Loading..."} className='h-96 w-full object-cover object-center'/>
+                            <img src={Minecraft} alt={"Loading..."} className='h-96 w-full object-cover object-center'/>
+                            <img src={GTA5Img} alt={"Loading..."} className='h-96 w-full object-cover object-center'/>
+                            <img src={RDR2} alt={"Loading..."} className='h-96 w-full object-cover object-center'/>
+                            <img src={ResidentEvil} alt={"Loading..."} className='h-96 w-full object-cover object-center'/>
+                            <img src={MetroExodus} alt={"Loading..."} className='h-96 w-full object-cover object-center'/>
+                            <img src={TheWitcher3} alt={"Loading..."} className='h-96 w-full object-cover object-center'/>
                         </div>
                     </div>
 
@@ -78,12 +95,12 @@ export const MainPage = () => {
                         </h1>
 
                         <div className="grid grid-cols-6">
-                            <img src={photo1} alt={"Loading..."} className='h-96 w-full object-cover object-center'/>
-                            <img src={photo2} alt={"Loading..."} className='h-96 w-full object-cover object-center'/>
-                            <img src={photo3} alt={"Loading..."} className='h-96 w-full object-cover object-center'/>
-                            <img src={photo4} alt={"Loading..."} className='h-96 w-full object-cover object-center'/>
-                            <img src={photo5} alt={"Loading..."} className='h-96 w-full object-cover object-center'/>
-                            <img src={photo5} alt={"Loading..."} className='h-96 w-full object-cover object-center'/>
+                            <img src={Dota2} alt={"Loading..."} className='h-96 w-full object-cover object-center'/>
+                            <img src={CS2} alt={"Loading..."} className='h-96 w-full object-cover object-center'/>
+                            <img src={GenshinImpact} alt={"Loading..."} className='h-96 w-full object-cover object-center'/>
+                            <img src={PUBG} alt={"Loading..."} className='h-96 w-full object-cover object-center'/>
+                            <img src={Fifa} alt={"Loading..."} className='h-96 w-full object-cover object-center'/>
+                            <img src={WorldOfTanks} alt={"Loading..."} className='h-96 w-full object-cover object-center'/>
                         </div>
                     </div>
 
