@@ -13,7 +13,7 @@ export default {
             washedWhite: '#e0d8be',
             cardinGreen: '#0c1c1c',
             bristolBlue: '#518d8d',
-
+            denim: '#000026',
         },
         backgroundImage: {
             'price': "url('/src/Assets/Background/PriceBackground.jpg')",
