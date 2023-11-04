@@ -1,14 +1,20 @@
 import React from 'react';
-// @ts-ignore
-import videoBackground from '../Assets/VideoBackground/VideoBackgroundMainPage.mp4';
+import {Link} from "react-router-dom";
+import {Contacts} from "./PagesInfo/Contacts/Contacts";
+import {VideoElement} from "./ElementsPage/VideoElement";
+import {ImgElement} from "./ElementsPage/ImgElement";
+
+//Photos:
 import supportCompany from '../Assets/Img/SupportCompany.png'
 
+//Cyber club photos
 import photo1 from '../Assets/PhotoClub/1.jpeg'
 import photo2 from '../Assets/PhotoClub/2.jpg'
 import photo3 from '../Assets/PhotoClub/3.jpg'
 import photo4 from '../Assets/PhotoClub/4.jpg'
 import photo5 from '../Assets/PhotoClub/5.jpeg'
 
+//Top game
 import Minecraft from '../Assets/Game/Minecraft.png'
 import GTA5Img from '../Assets/Game/GTA.jpg'
 import RDR2 from '../Assets/Game/RDR2.jpg'
@@ -16,7 +22,7 @@ import ResidentEvil from '../Assets/Game/ResidentEvilVillage.jpg'
 import MetroExodus from '../Assets/Game/MetroExodus.jpg'
 import TheWitcher3 from '../Assets/Game/TheWitcher3.jpg'
 
-
+//Online game
 import GenshinImpact from '../Assets/Game/GenshinImpact.jpg'
 import CS2 from '../Assets/Game/cs2.jpg'
 import Dota2 from '../Assets/Game/Dota2.jpg'
@@ -24,36 +30,20 @@ import PUBG from '../Assets/Game/PUBG.jpg'
 import Fifa from '../Assets/Game/FIFA.jpeg'
 import WorldOfTanks from '../Assets/Game/WorldOfTanks.jpg'
 
-import {Link} from "react-router-dom";
-import {Contacts} from "./PagesInfo/Contacts/Contacts";
-
-
 export const MainPage = () => {
     return (
         <div>
-            <div className="relative w-full h-screen overflow-hidden">
-                <video autoPlay loop muted className="w-full object-cover">
-                    <source src={videoBackground} type="video/mp4"/>
-                    Ваш браузер не підтримує відео.
-                </video>
-                <div
-                    className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center text-white z-10">
-                    <h1 className="text-3xl font-bold">Necron Cyber Club</h1>
-                    <p className="text-lg">Новітній кіберспортивний клуб у Києві</p>
-                </div>
-            </div>
-
+            <VideoElement />
 
             <div>
-                <img src={supportCompany} alt={"Loading..."}/>
+                <img src={supportCompany} alt={"Loading..."} className="w-full"/>
 
-                <div className="grid grid-cols-5 relative">
-                    <img src={photo1} alt={"Loading..."} className='h-96 w-full object-cover object-center'/>
-                    <img src={photo2} alt={"Loading..."} className='h-96 w-full object-cover object-center'/>
-                    <img src={photo3} alt={"Loading..."} className='h-96 w-full object-cover object-center'/>
-                    <img src={photo4} alt={"Loading..."} className='h-96 w-full object-cover object-center'/>
-                    <img src={photo5} alt={"Loading..."} className='h-96 w-full object-cover object-center'/>
-                </div>
+                <ImgElement
+                    images={[photo1, photo2, photo3, photo4, photo5]}
+                    size={5}
+                    classNameComponent="grid grid-cols-5 relative"
+                    classNameImg="h-96 w-full object-cover object-center"
+                /> {/*Cyber club photos*/}
 
                 <div className="grid grid-cols-2 gap-2 p-4">
                     <div>
@@ -79,14 +69,12 @@ export const MainPage = () => {
                             ВЕЛИКИЙ ВИБІР ІГОР НА БУДЬ-ЯКИЙ СМАК
                         </h1>
 
-                        <div className="grid grid-cols-6">
-                            <img src={Minecraft} alt={"Loading..."} className='h-96 w-full object-cover object-center'/>
-                            <img src={GTA5Img} alt={"Loading..."} className='h-96 w-full object-cover object-center'/>
-                            <img src={RDR2} alt={"Loading..."} className='h-96 w-full object-cover object-center'/>
-                            <img src={ResidentEvil} alt={"Loading..."} className='h-96 w-full object-cover object-center'/>
-                            <img src={MetroExodus} alt={"Loading..."} className='h-96 w-full object-cover object-center'/>
-                            <img src={TheWitcher3} alt={"Loading..."} className='h-96 w-full object-cover object-center'/>
-                        </div>
+                        <ImgElement
+                            images={[Minecraft, GTA5Img, RDR2, ResidentEvil, MetroExodus,TheWitcher3]}
+                            size={6}
+                            classNameComponent="grid grid-cols-6"
+                            classNameImg="h-96 w-full object-cover object-center"
+                        />{/*Top game*/}
                     </div>
 
                     <div>
@@ -94,14 +82,12 @@ export const MainPage = () => {
                             Випробуй усі сучасні тайтли на максимальних налаштуваннях у комп'ютерному клубі Necron!
                         </h1>
 
-                        <div className="grid grid-cols-6">
-                            <img src={Dota2} alt={"Loading..."} className='h-96 w-full object-cover object-center'/>
-                            <img src={CS2} alt={"Loading..."} className='h-96 w-full object-cover object-center'/>
-                            <img src={GenshinImpact} alt={"Loading..."} className='h-96 w-full object-cover object-center'/>
-                            <img src={PUBG} alt={"Loading..."} className='h-96 w-full object-cover object-center'/>
-                            <img src={Fifa} alt={"Loading..."} className='h-96 w-full object-cover object-center'/>
-                            <img src={WorldOfTanks} alt={"Loading..."} className='h-96 w-full object-cover object-center'/>
-                        </div>
+                        <ImgElement
+                            images={[Dota2, CS2, GenshinImpact, PUBG, Fifa,WorldOfTanks]}
+                            size={6}
+                            classNameComponent="grid grid-cols-6"
+                            classNameImg="h-96 w-full object-cover object-center"
+                        />{/*Online game*/}
                     </div>
 
                     <h1 className="p-4 text-center font-bold text-2xl">
@@ -116,7 +102,6 @@ export const MainPage = () => {
                     </div>
                 </div>
             </div>
-
 
             <Contacts />
         </div>
